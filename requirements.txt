@@ -1,0 +1,62 @@
+# Core App Requirements
+streamlit==1.44.1
+python-dotenv>=1.0.0
+pandas==2.2.3
+numpy==2.2.4
+scikit-learn==1.6.1
+matplotlib==3.8.4
+seaborn==0.13.2
+requests==2.32.3
+yfinance==0.2.33
+plotly==6.0.1
+
+# Text Processing & Sentiment Analysis
+nltk==3.9.1
+textblob==0.19.0
+regex==2024.11.6
+
+# Machine Learning & AI
+tensorflow==2.15.0
+keras==2.15.0
+joblib==1.4.2
+
+# LangChain & LLM Tools
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.0.15
+langchain-groq>=0.0.2
+
+# Visualization & Web App
+altair==5.5.0
+pydeck==0.9.1
+
+# General Utilities & Dependencies
+attrs==25.3.0
+blinker==1.9.0
+cachetools==5.5.2
+certifi==2025.1.31
+charset-normalizer==3.4.1
+click==8.1.8
+gitdb==4.0.12
+GitPython==3.1.44
+idna==3.10
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+narwhals==1.35.0
+packaging==24.2
+pillow==11.2.1
+protobuf==5.29.4
+pyarrow==19.0.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
+referencing==0.36.2
+rpds-py==0.24.0
+six==1.17.0
+smmap==5.0.2
+tenacity==9.1.2
+toml==0.10.2
+tornado==6.4.2
+tqdm==4.67.1
+typing_extensions==4.13.2
+tzdata==2025.2
+urllib3==2.4.0

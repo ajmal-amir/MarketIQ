@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Python cache
+*.pyo
+*.pyd
+
+# Streamlit cache and config
+.streamlit/
+.cache/
+.pytest_cache/
+
+# MyPy, coverage, profiling
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Other
+*.sqlite3
+*.db
