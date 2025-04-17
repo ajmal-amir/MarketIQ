@@ -2,7 +2,7 @@
 streamlit==1.44.1
 python-dotenv>=1.0.0
 pandas==2.2.3
-numpy==2.2.4
+numpy==1.26.4
 scikit-learn==1.6.1
 matplotlib==3.8.4
 seaborn==0.13.2
