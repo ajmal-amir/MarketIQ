@@ -81,7 +81,7 @@ def show_stock_predictionfmp():
                                                                      
     
     # ticker = st.sidebar.text_input("Enter Stock Ticker", "AAPL")
-    start_date = st.sidebar.date_input("Select Start Date", pd.to_datetime("2023-01-01"))
+    start_date = st.sidebar.date_input("Select Start Date", pd.to_datetime("2013-01-01"))
     end_date = st.sidebar.date_input("Select End Date", pd.to_datetime("2025-01-01"))
     prediction_days = st.sidebar.slider("Prediction Duration (Days)", 1, 60, 30)
     
@@ -129,6 +129,35 @@ def show_stock_predictionfmp():
         "AdaBoost": AdaBoostRegressor(n_estimators=50)
     }
     
+    # --- 🎈 Fun Explanation for MAE, MSE, and R2 like for an 8-year-old ---
+    st.markdown("---")
+    st.subheader(" How Do We Know Which Model is Better?")
+
+    st.markdown("""
+    ### Imagine This:
+    
+    - **MAE (Mean Absolute Error)**:  
+      It's like counting **how many jellybeans** you guessed wrong — but you're only counting **how far off you were**, not whether you guessed too high or too low.  
+      Lower MAE = You guessed almost the right number of jellybeans!
+
+    - **MSE (Mean Squared Error)**:  
+      It's like **punishing big mistakes** even more.  
+      If you guessed **WAY wrong**, the MSE makes your mistake **even bigger**!  
+      So smaller MSE = fewer giant mistakes!
+
+    - **R² Score (R-squared)**:  
+      Imagine you built a **super cool Robot ** to guess jellybeans.  
+      R² tells you **how awesome your Robot is**!  
+      If R² is **close to 1**, your Robot is **really good at guessing**!  
+      If it's close to **zero or negative**, your Robot needs some serious fixing!
+
+    ### So Remember:
+    - Lower **MAE** and **MSE** are good (small mistakes).
+    - Higher **R² Score** is super good (awesome predictions)!
+    """)
+    st.markdown("---")
+    st.subheader(" List Models Trained for Stock Trend Prediction")
+
     predictions = {}
     accuracies = {}
     for model_name, model in models.items():
@@ -177,6 +206,19 @@ def show_stock_predictionfmp():
         ax.legend()
         st.pyplot(fig)
     
+         # --- 📋 Show a Model Comparison Table ---
+    st.markdown("---")
+    st.subheader("📋 Model Performance Comparison")
+
+    # Create a DataFrame from the accuracy dictionary
+    results_df = pd.DataFrame(accuracies).T
+    results_df = results_df.sort_values(by="R2 Score", ascending=False)
+
+    # Display the table
+    st.dataframe(results_df, height=400)
+
+    
+
     
     def add_footer():
         st.markdown(
