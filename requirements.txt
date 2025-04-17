@@ -45,7 +45,7 @@ MarkupSafe==3.0.2
 narwhals==1.35.0
 packaging==24.2
 pillow==11.2.1
-protobuf==5.29.4
+protobuf==3.20.3
 pyarrow==19.0.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
