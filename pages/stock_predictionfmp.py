@@ -84,7 +84,8 @@ def show_stock_predictionfmp():
     
     # ticker = st.sidebar.text_input("Enter Stock Ticker", "AAPL")
     start_date = st.sidebar.date_input("Select Start Date", pd.to_datetime("2013-01-01"))
-    end_date = st.sidebar.date_input("Select End Date", pd.to_datetime("2025-01-01"))
+    # Automatically set end date to today
+    end_date = st.sidebar.date_input("Select End Date", pd.to_datetime("today"))
     prediction_days = st.sidebar.slider("Prediction Duration (Days)", 1, 60, 30)
     
     graph_options = ["Line Graph", "Bar Graph", "Scatter Plot"]
