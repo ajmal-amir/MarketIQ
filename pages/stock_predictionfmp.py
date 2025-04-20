@@ -19,12 +19,7 @@ def show_stock_predictionfmp():
     from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
     from dotenv import load_dotenv
 
-    if "FMP_API_KEY" in st.secrets:
-        FMP_API_KEY = st.secrets["FMP_API_KEY"]
-    else:
-        from dotenv import load_dotenv
-        load_dotenv("api_keys.env")
-        FMP_API_KEY = os.getenv("FMP_API_KEY")
+
     
     
     # Function to fetch stock data from FMP API
