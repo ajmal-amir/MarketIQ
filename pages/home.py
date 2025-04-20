@@ -44,7 +44,29 @@ def show_home():
         """
     )
 
-    
+    def add_footer():
+    st.markdown(
+        """
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #21130d;
+        }
+        </style>
+        <div class="footer">
+            © 2025 StockMarketIQ. All rights reserved. | Developed by Ajmal Amir
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 
 
 
