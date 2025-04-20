@@ -10,8 +10,17 @@ from tensorflow.keras.models import load_model
 from dotenv import load_dotenv
 
 # Load environment variables for API keys
-load_dotenv("api_keys.env")
-FMP_API_KEY = os.getenv("FMP_API_KEY")
+# load_dotenv("api_keys.env")
+# FMP_API_KEY = os.getenv("FMP_API_KEY")
+
+if "FMP_API_KEY" in st.secrets:
+    FMP_API_KEY = st.secrets["FMP_API_KEY"]
+else:
+    from dotenv import load_dotenv
+    load_dotenv("api_keys.env")
+    FMP_API_KEY = os.getenv("FMP_API_KEY")
+
+
 
 # Load pre-trained LSTM model (Assuming model is already trained & saved)
 try:
