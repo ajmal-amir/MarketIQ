@@ -306,7 +306,7 @@ def show_financial_analyst_ai():
             }
             </style>
             <div class="footer">
-                © 2025 StockMarketIQ. All rights reserved.
+                  © 2025 StockMarketIQ. All rights reserved | Developed by Ajmal Amir.
             </div>
             """,
             unsafe_allow_html=True,
