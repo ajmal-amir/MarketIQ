@@ -1,5 +1,7 @@
 import streamlit as st
+
 st.set_page_config(page_title="home", layout="wide")
+
 # Function to show disclaimer popup
 def show_disclaimer():
     with st.expander("⚠️ **Disclaimer - Please Read Before Proceeding** ⚠️", expanded=True):
@@ -18,6 +20,30 @@ def show_disclaimer():
             """
         )
         st.success("✅ Click outside this message to continue.")
+
+# Footer function (properly aligned now)
+def add_footer():
+    st.markdown(
+        """
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #21130d;
+        }
+        </style>
+        <div class="footer">
+            © 2025 StockMarketIQ. All rights reserved. | Developed by Ajmal Amir
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Function to show the Home Page
 def show_home():
@@ -44,33 +70,8 @@ def show_home():
         """
     )
 
-    def add_footer():
-    st.markdown(
-        """
-        <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #f1f1f1;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            color: #21130d;
-        }
-        </style>
-        <div class="footer">
-            © 2025 StockMarketIQ. All rights reserved. | Developed by Ajmal Amir
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-
+    add_footer()  #Call the footer here
 
 # Example usage:
 if __name__ == "__main__":
-    show_home()  # Uncomment this to show the Home Page
-    # show_user_guide()  # Uncomment this to show the User Guide Page
+    show_home()
